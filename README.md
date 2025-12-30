@@ -3,7 +3,7 @@
 ## 🚀 실행 명령어
 
 ```bash
-./build/keyhunt -m bsgs -f tests/satoshi.txt -k 128 --gpu -g 0 -q -S -s 20
+./build/keyhunt -m bsgs -f tests/puzzle71.txt -k 128 --gpu -g 0 -q -S -s 20
 ```
 
 ---
@@ -463,5 +463,27 @@ Range End: 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141
 [CUDA] legacyGroupCheck avg_us_per_call total=5218.24 interval=5217.11
 [+] Total 183240209838637056 keys in 1800 seconds: ~101 Tkeys/s (101800116577020 keys/s)
 
-
 ```
+# 실제 성능 RTX 3060
+![RTX 3060](./RTX3060.png)
+
+
+# https://btcpuzzle.info 성능을 비교하자.
+
+371.39 Bkeys/s 라고 표시되는데, RTX 3060 1개 101 Tkeys/s 에 비교하면 게임이 안된다.
+
+✅ 초당 키 개수
+
+371.39 Bkeys/s = 371.39 × 10⁹ keys/s
+👉 초당 371,390,000,000 개
+👉 약 3,713억 개 / 초
+
+✅ 초당 키 개수
+
+101 Tkeys/s = 101 × 10¹² keys/s
+👉 초당 101,000,000,000,000 개
+👉 약 101조 개 / 초
+
+
+![btcpuzzle.info](./btcpuzzle.info.png)
+
